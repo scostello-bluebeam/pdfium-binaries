@@ -25,6 +25,7 @@ PDFium_SOURCE_DIR="$PWD/pdfium"
 PDFium_BUILD_DIR="$PDFium_SOURCE_DIR/out"
 PDFium_PATCH_DIR="$PWD/patches"
 PDFium_CMAKE_CONFIG="$PWD/PDFiumConfig.cmake"
+PDFium_EXAMPLE_DIR="$PWD/example"
 PDFium_ARGS="$PWD/args/$OS.args.gn"
 
 # Output
@@ -83,6 +84,7 @@ ls -l "$PDFium_BUILD_DIR"
 
 # Install
 cp "$PDFium_CMAKE_CONFIG" "$PDFium_STAGING_DIR"
+cp "$PDFium_EXAMPLE_DIR/*" "$PDFium_STAGING_DIR"
 cp "$PDFium_SOURCE_DIR/LICENSE" "$PDFium_STAGING_DIR"
 cp -R "$PDFium_SOURCE_DIR/public" "$PDFium_INCLUDE_DIR"
 rm -f "$PDFium_INCLUDE_DIR/DEPS"
